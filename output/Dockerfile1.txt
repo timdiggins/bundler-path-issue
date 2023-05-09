@@ -1,0 +1,104 @@
+
+----------------
+ls -al vendor/bundle/ruby/2.7.0/gems
+total 12
+drwxr-xr-x 3 root root 4096 May  9 15:35 .
+drwxr-xr-x 9 root root 4096 May  9 15:35 ..
+drwxr-xr-x 4 root root 4096 May  9 15:35 sample-0.1.1
+----------------
+ls -al /usr/local/bundle/ruby/2.7.0/gems
+ls: cannot access '/usr/local/bundle/ruby/2.7.0/gems': No such file or directory
+----------------
+gem -v
+3.4.12
+----------------
+bundle -v
+Bundler version 2.4.12
+----------------
+bundle config --no-color
+Settings are listed in order of priority. The top value will be used.
+app_config
+Set via BUNDLE_APP_CONFIG: "/usr/local/bundle"
+
+deployment
+Set for your local app (/usr/local/bundle/config): true
+
+silence_root_warning
+Set via BUNDLE_SILENCE_ROOT_WARNING: true
+
+without
+Set for your local app (/usr/local/bundle/config): [:test, :development]
+
+----------------
+bundle env
+## Environment
+
+```
+Bundler       2.4.12
+  Platforms   ruby, x86_64-linux
+Ruby          2.7.8p225 (2023-03-30 revision 1f4d4558484b370999954f3ede7e3aa3a3a01ef3) [x86_64-linux]
+  Full Path   /usr/local/bin/ruby
+  Config Dir  /usr/local/etc
+RubyGems      3.4.12
+  Gem Home    /usr/local/bundle
+  Gem Path    /root/.gem/ruby/2.7.0:/usr/local/lib/ruby/gems/2.7.0:/usr/local/bundle
+  User Home   /root
+  User Path   /root/.gem/ruby/2.7.0
+  Bin Dir     /usr/local/bundle/bin
+Tools         
+  Git         2.30.2
+  RVM         not installed
+  rbenv       not installed
+  chruby      not installed
+```
+
+## Bundler Build Metadata
+
+```
+Built At          2023-04-11
+Git SHA           e2cf278db1
+Released Version  true
+```
+
+## Bundler settings
+
+```
+app_config
+  Set via BUNDLE_APP_CONFIG: "/usr/local/bundle"
+deployment
+  Set for your local app (/usr/local/bundle/config): true
+silence_root_warning
+  Set via BUNDLE_SILENCE_ROOT_WARNING: true
+without
+  Set for your local app (/usr/local/bundle/config): [:test, :development]
+```
+
+## Gemfile
+
+### Gemfile
+
+```ruby
+# frozen_string_literal: true
+
+source "https://rubygems.org"
+
+gem "sample"
+```
+
+### Gemfile.lock
+
+```
+GEM
+  remote: https://rubygems.org/
+  specs:
+    sample (0.1.1)
+
+PLATFORMS
+  x86_64-linux
+
+DEPENDENCIES
+  sample
+
+BUNDLED WITH
+   2.4.12
+```

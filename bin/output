@@ -1,0 +1,15 @@
+#! /bin/bash
+
+export TERM=xterm-mono
+
+output() {
+  printf '%s\n' "----------------"
+  printf '%s\n' "$1"
+  $1
+}
+output "ls -al vendor/bundle/ruby/2.7.0/gems"
+output "ls -al /usr/local/bundle/ruby/2.7.0/gems"
+output "gem -v"
+output "bundle -v"
+output "bundle config --no-color"
+output "bundle env"
